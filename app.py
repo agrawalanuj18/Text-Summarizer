@@ -42,4 +42,4 @@ def summarize_text():
     return render_template('summary.html', summary=summary, text=text)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
