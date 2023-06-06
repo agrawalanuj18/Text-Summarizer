@@ -13,7 +13,7 @@ def summarize():
     sentences = sent_tokenize(text)
     words = word_tokenize(text.lower())
     stop_words = set(stopwords.words('english'))
-    print(stop_words)
+    # print(stop_words)
     filtered_words = [word for word in words if word not in stop_words]
     word_frequencies = FreqDist(filtered_words)
     sentence_scores = {}

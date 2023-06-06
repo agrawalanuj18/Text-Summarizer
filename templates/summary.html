@@ -1,70 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Text Summarizer</title>
-  </head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  
+<head>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{url_for('static', filename='css/summary.css')}}">
-  <body>
-  <body>
-    <header>
-        <h2 class="logo">Text Summarizer</h2>
-        <nav class="navigation">
-            <a href="#" class="active">Home</a>
-            <a href="#About">About</a>
-            <a href="#">Login</a>
-            <!-- <a href="#">Contact</a> -->
-        </nav>
-    </header>
   
-  
-    <section class="parallax">
-       
-        <section>
-        
-          
+  <style>
+    .card-full {
+      height: 90vh; /* Adjust the height as desired */
+    }
+  </style>
+</head>
+<body>
 
-        <div class="container srt">
-            
-            <p class="original_text col-sm-6">
-              Original Text <br> <br>
-              {{ text }}</p>
-            <p class="summary_text col-sm-6">
-               Summary <br> <br>
-              {{ summary }}</p>
-            <div>
-          
-            </section>
-                  
+  <nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+  </nav>
+
+
+  <div class="container">
+    <div class="row align-items-center justify-content-center" style="height: 100vh;">
+      <div class="col-lg-12">
+        <div class="card card-full">
+          <div class="card-body">
+            <h2 class="card-title align-items-center justify-content-center">Result</h5>
+              <hr>
+            <div class="row">
+              <div class="col-md-6">
+                 <h3>Original Text</h3> <br>
+                 <p> {{ text }}</p>
+              </div>
+              <div class="col-md-6">
+               <h3>Summary</h3>  <br> 
+                <p> {{ summary }}</p>
+              </div>
+            </div>
           
-      </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <section class="sec" id="About">
-        <h1 class="logo" >About</h1>
-        <br>
-        <br>
-        <h2>NLP text summarization</h2>
-        <p>
-          Text summarization is the process of condensing a large document into a shorter version while preserving the most important information. It has become a vital research area due to the exponential increase in the amount of textual information available on the internet. We are producers and consumers of data at the same time. Text summarization has been extensively used in various fields like science, medicine, law, engineering, etc. Researchers have focused on generating summaries of doctor's prescriptions, and that has been proved very useful to patients. Similarly, long news articles have been summarized and this way readers can gain a lot of information on several topics within a short span of time. This literature review aims to provide an overview of text summarization through Natural Language Processing (NLP) in Machine Learning (ML).<br><br>
-          <h2>NLP in Text Summarization:
-          </h2>
-        <p>
-          NLP techniques play a crucial role in text summarization. These techniques include part-of-speech tagging, Named Entity Recognition (NER), and semantic analysis. Part-of-speech tagging involves labelling words in a sentence with their respective parts of speech, such as nouns, verbs, and adjectives. NER involves identifying and categorizing named entities, such as people, organizations, and locations. The semantic analysis involves identifying the meaning of words and their relationships with other words in the sentence.<br><br>
-
-        </p>
-
-    </section>
-
-      <script src="{{url_for('static', filename='js/index.js')}}"></script>
-
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-      
-   
-  </body>
+  <!-- Add Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
