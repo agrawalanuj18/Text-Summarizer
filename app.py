@@ -4,6 +4,7 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 from heapq import nlargest
+nltk.download('punkt')
 
 
 app = Flask(__name__)
