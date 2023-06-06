@@ -11,10 +11,16 @@ body {
     background: #f9f9f9;
     min-height: 100vh;
     overflow-x: hidden;
-    color: #003329;
-    font-weight: 600;
+ 
+    
 }
 
+.logo{
+  font-weight: 800;
+  color: #003329;
+  /* width: 250px;
+  height: 100px; */
+}
 .card-center {
     position: absolute;
     top: 50%;
@@ -22,6 +28,7 @@ body {
     transform: translate(-50%, -50%);
     width: 80%; /* Adjust the width as desired */
     height: 400px; /* Adjust the height as desired */
+    box-shadow: 3px 4px 5px 6px rgba(20,20,20,0.4);
   }
   
   .card-body {

@@ -39,7 +39,10 @@ def home():
 def summarize_text():
     summary = summarize()
     text = request.form['text']
-    return render_template('summary.html', summary=summary, text=text)
+    countOfWordsText = len(text.split())
+    countOfWordsSummary = len(summary.split())
+
+    return render_template('summary.html', summary=summary, text=text, countOfWordsText=countOfWordsText, countOfWordsSummary=countOfWordsSummary)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
