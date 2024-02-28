@@ -6,7 +6,7 @@ from nltk.probability import FreqDist
 from heapq import nlargest
 import os
 # nltk.download('punkt')
-nltk.data.path.append("/.venv/Lib/site-packages/nltk")
+nltk.data.path.append("/.venv/Lib/site-packages/nltk/tokenize/punkt.py")
 # Set NLTK data path programmatically
 # nltk_data_path = os.path.join(os.getcwd(), ".venv", "Lib", "site-packages", "nltk", "data")
 # nltk.data.path.append(nltk_data_path)
