@@ -5,9 +5,7 @@ from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 from heapq import nlargest
 import os
-# nltk.download('punkt')
-# nltk.data.path.append("/.venv/Lib/site-packages/nltk/tokenize/punkt.py")
-# Set NLTK data path programmatically
+
 app = Flask(__name__)
 
 nltk_data_path = os.path.join(os.getcwd(), ".venv", "Lib", "site-packages", "nltk", "data")
