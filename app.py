@@ -48,5 +48,3 @@ def summarize_text():
 
     return render_template('summary.html', summary=summary, text=text, countOfWordsText=countOfWordsText, countOfWordsSummary=countOfWordsSummary)
 
-if __name__ == '__main__':
-    app.run(debug=True)
