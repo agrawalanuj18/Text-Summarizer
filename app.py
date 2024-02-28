@@ -5,9 +5,12 @@ from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 from heapq import nlargest
 # nltk.download('punkt')
-nltk.data.path.append("\.venv\Lib\site-packages\nltk\tokenize")
 
+# Set NLTK data path programmatically
+# nltk_data_path = os.path.join(os.getcwd(), ".venv", "Lib", "site-packages", "nltk", "data")
+# nltk.data.path.append(nltk_data_path)
 app = Flask(__name__)
+nltk.data.path.append("\.venv\Lib\site-packages\nltk\tokenize")
 
 def summarize():
     text = request.form['text']
