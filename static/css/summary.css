@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -14,11 +14,61 @@ body {
     
     
 }
+
+    /* width: 250px;
+  height: 100px; */
+
+  @import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #003329;
+  background-color: #D2E9E9;
+  
+}
+
+#title {
+  background-color: #D2E9E9;
+}
+
+#sectitile{
+  background-color: #D2E9E9;
+}
+
+/* first section start here  */
+.starting {
+  padding: 3% 5% 0%;
+  color: black;
+}
+
+/* navbar css start here  */
+.navbar {
+  padding: 0 0 3rem;
+}
+/* for removing existing padding from bootstarp in nav-brand  */
+.tindog {
+  padding-left: 0;
+}
+
+.nav {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+}
+
+.nav-item {
+  font-size: 1.2rem;
+}
+
+
 .logo{
     font-weight: 600;
     color: #003329;
-    /* width: 250px;
-  height: 100px; */
 }
 
 .card-full {
@@ -26,4 +76,157 @@ body {
      /* Set a max-width to limit the card's width */
      overflow-y: auto;
      box-shadow: 3px 4px 5px 6px rgba(20,20,20,0.4);
+     overflow-x: hidden;
   }
+
+  #footer {
+    text-align: center;
+    margin: 30px;
+    /* margin-top:460px ; */
+  }
+  
+  .media-icon {
+    margin: 10px;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #003329;
+  background-color: #ff4c68;
+  
+}
+
+#title {
+  background-color: #ff4c68;
+}
+
+#sectitile{
+  background-color: #ff4c68;
+}
+
+/* first section start here  */
+.starting {
+  padding: 3% 5% 0%;
+  color: black;
+}
+
+
+/* navbar css start here  */
+.navbar {
+  padding: 0 0 3rem;
+}
+/* for removing existing padding from bootstarp in nav-brand  */
+.tindog {
+  padding-left: 0;
+}
+
+.nav {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3.5rem;
+}
+
+.nav-item {
+  font-size: 1.5rem;
+}
+/* 
+.navigation a {
+  text-decoration: none;
+  padding: 7px 18px;
+  border-radius: 25px;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  background: white;
+  color: #ff4c68;
+} */
+
+
+body {
+    /* background: #f9f9f9; */
+    /* min-height: 100vh; */
+    /* overflow-x: hidden; */
+}
+
+.logo{
+  font-weight: 800;
+  color: #003329;
+  /* width: 250px;
+  height: 100px; */
+}
+.card-center {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%; /* Adjust the width as desired */
+    height: 400px; /* Adjust the height as desired */
+    box-shadow: 3px 4px 5px 6px rgba(20,20,20,0.4);
+    border-radius:15px;
+  }
+  
+  .card-body {
+    height: 95%;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .form-group {
+
+    height: 10%;
+    width: 120%;
+    resize: none;
+  }
+  
+  /* feature section  */
+
+#features {
+  padding: 7% 15%;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  margin-top: 30vh;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 4%;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+.icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+.icon:hover {
+  color: #ff4c68;
+}
+
+
+#footer {
+  text-align: center;
+  margin: 30px;
+  /* margin-top:460px ; */
+  color: white;
+}
+
+.media-icon {
+  margin: 10px;
+}

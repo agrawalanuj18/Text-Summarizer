@@ -4,6 +4,7 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 from heapq import nlargest
+nltk.download('punkt')
 
 
 app = Flask(__name__)
@@ -11,8 +12,11 @@ app = Flask(__name__)
 def summarize():
     text = request.form['text']
     sentences = sent_tokenize(text)
+    print(sentences)
     words = word_tokenize(text.lower())
+    print(words)
     stop_words = set(stopwords.words('english'))
+    print(stop_words)
     # print(stop_words)
     filtered_words = [word for word in words if word not in stop_words]
     word_frequencies = FreqDist(filtered_words)
@@ -45,4 +49,4 @@ def summarize_text():
     return render_template('summary.html', summary=summary, text=text, countOfWordsText=countOfWordsText, countOfWordsSummary=countOfWordsSummary)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

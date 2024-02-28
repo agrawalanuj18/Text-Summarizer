@@ -1,7 +1,3 @@
 Flask
 Gunicorn
 nltk
-nltk.tokenize
-nltk.corpus
-nltk.probability
-heapq
