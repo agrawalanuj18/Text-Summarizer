@@ -5,7 +5,7 @@ from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 from heapq import nlargest
 # nltk.download('punkt')
-
+nltk.data.path.append("\.venv\Scripts\nltk.exe")
 
 app = Flask(__name__)
 
